@@ -1,0 +1,63 @@
+*::-webkit-scrollbar{
+    width: 5px;
+}
+*::-webkit-scrollbar-track{
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #c7c7c7;
+    border-radius: 20px;
+    border: none;
+}
+
+.library{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(211, 223, 226);
+    height: 100%;
+    width: 20rem;
+    overflow: scroll;
+    box-shadow: 2px 2px 40px #c7c7c7;
+    transform: translateX(-100%);
+    transition: 0.2s all linear;
+    opacity: 0;
+    background-color:#fff;
+    h2{
+        padding: 2rem;
+    }
+}
+.library-song{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        background: rgb(181, 140, 189);
+    }
+    img{
+        width: 30%;
+    }
+    .song-description{
+        padding-left: 1rem;
+        h3{
+            font-size: 1rem;
+        }
+        h4{
+            font-size: 0.7rem;
+        }
+    }
+}
+.select{
+    background-color: rgb(223, 106, 246);
+}
+.active-library{
+    transform: translateX(0%);
+    opacity: 1;
+}
+@media screen and (max-width:768px){
+    .library{
+        width: 100%;
+    }
+}
